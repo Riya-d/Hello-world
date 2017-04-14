@@ -1,0 +1,47 @@
+package rev;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class Linkedlist {
+    public static void main(String args[]) {
+
+    	String s;
+        LinkedList<String> linkedlist = new LinkedList<String>();
+        linkedlist.add("Item1");
+       linkedlist.add("Item5");
+       linkedlist.add("Item3");
+        linkedlist.add("Item6");
+       linkedlist.add("Item2");
+        System.out.println("Your Linked List : " +linkedlist);
+
+        Scanner input=new Scanner(System.in);
+     
+        System.out.println("please enter the item to be added: ");
+        //ch1 = (char)input.nextInt();
+        s= input.nextLine(); 
+         linkedlist.addFirst("");
+        System.out.println("LinkedList Content after addition: " +linkedlist);
+       
+        System.out.println("do you want to add more items?: ");
+        	Scanner scanner = new Scanner(System.in);
+
+        	if(scanner.nextBoolean()==true) {
+        	    System.out.println(" please enter the item to be added: ");
+        	    //ch1= (char)input.nextInt();
+        	    s= input.nextLine();
+        	} else {
+        	    System.out.println("no!!");
+        	}
+       
+        Object firstvar = linkedlist.get(0);
+        System.out.println("First element: " +firstvar);
+        linkedlist.set(0, "Changed first item");
+        Object firstvar2 = linkedlist.get(0);
+        System.out.println("First element after update by set method: " +firstvar2);
+
+  
+       //  linkedlist.add(0, "Newly added item");
+        System.out.println("Final Content: " +linkedlist); 
+    }
+}
